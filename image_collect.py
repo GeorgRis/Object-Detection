@@ -2,7 +2,6 @@ import cv2
 import uuid
 import os 
 import time
-import subprocess
 
 
 labels = ['tommel_opp','tommel_ned']
@@ -19,7 +18,7 @@ for label in labels:
     if not os.path.exists(path):
         os.makedirs(path)
         
-"""for label in labels:
+for label in labels:
     cap = cv2.VideoCapture(0)
     print('Collecting images for {}'.format(label))
     time.sleep(5)
@@ -35,7 +34,7 @@ for label in labels:
             break
 cap.release()
 cv2.destroyAllWindows()
-"""
+
 
 for label in labels:
     path = os.path.join(IMAGE_P, label)
